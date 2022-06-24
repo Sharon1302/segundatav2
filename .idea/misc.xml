@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/account_upgrade.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_card.xml" value="0.16394927536231885" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_payment.xml" value="0.16394927536231885" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_registercustomer.xml" value="0.22" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_reset.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_update_account.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_update_account2.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/buy.xml" value="0.21" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/cofigure.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/content_update_account.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/final_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_dashboard.xml" value="0.17300724637681159" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_first2.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_notifications.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_second.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_second2.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/fragment_updateaccount.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/instant_funding.xml" value="0.2" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/manual_funding.xml" value="0.1875" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/menu.xml" value="0.21" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/messages.xml" value="0.1" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/passwordchange.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/payment.xml" value="0.1105072463768116" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/pinchange.xml" value="0.18854166666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/pinpad.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/transfer.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/view_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/view_list_no_selection_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18854166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

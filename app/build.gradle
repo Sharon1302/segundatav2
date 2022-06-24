@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.dpex.segundata"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 7
+        versionName "7.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.2.1@aar'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'gr.escsoft.michaelprimez.searchablespinner:SearchableSpinner:1.0.9'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.github.Shashank02051997:FancyFlashbar-Android:1.1'
+    implementation 'org.jetbrains:annotations:16.0.2'
+    implementation 'gr.escsoft.michaelprimez.revealedittext:RevealEditText:1.0.2'
+    implementation 'co.paystack.android.design.widget:pinpad:1.0.4'
+    implementation 'co.paystack.android:paystack:3.0.17'
+    implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
+    implementation "com.monnify.android-sdk:monnify-android-sdk:1.1.2"
+}

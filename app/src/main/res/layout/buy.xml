@@ -1,0 +1,37 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/scrollView" android:elevation="10dp" android:background="@color/black">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:padding="0dp">
+        <ImageView android:layout_width="fill_parent" android:layout_height="80dp" android:gravity="center" android:layout_marginTop="0dp" android:src="@drawable/logo" android:id="@+id/image" android:contentDescription="Logo"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="80dp" android:gravity="center" android:layout_marginTop="60dp" android:textStyle="bold" android:textSize="20dp" android:id="@+id/wallet" android:textColor="@color/white" android:text="Wallet Balance: N200" android:contentDescription="Logo"/>
+        <LinearLayout android:id="@+id/login_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_marginTop="80dp" android:orientation="vertical">
+            <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner android:id="@+id/SearchableSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center_horizontal"
+                app:StartSearchTintColor="@android:color/white"
+                app:DoneSearchTintColor="#A4D1A2"
+                app:RevealViewBackgroundColor="#A4D1A2"
+                app:SearchViewBackgroundColor="@android:color/secondary_text_dark"
+                app:ShowBorders="false"
+                app:RevealEmptyText="Select a Bundle"
+                app:SearchViewTextColor="@color/black"
+                app:SpinnerExpandHeight="300dp"/>
+            <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner android:id="@+id/SearchableSpinner2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:visibility="gone" android:layout_below="@id/login_layout" android:layout_above="@id/others" android:gravity="center_horizontal" app:SearchHintText="@android:color/white" app:SearchViewTextColor="@android:color/white" app:StartSearchTintColor="@android:color/white" app:DoneSearchTintColor="@android:color/white" app:RevealViewBackgroundColor="#0E6251" app:SearchViewBackgroundColor="@android:color/white" app:ShowBorders="true" app:BordersSize="1dp" app:BoarderColor="#0E6251" app:SpinnerExpandHeight="0dp"/>
+            <EditText android:id="@+id/amount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/others" android:layout_below="@id/SearchableSpinner" android:layout_marginTop="45dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:background="@drawable/editext_border" android:drawableLeft="@drawable/coin" android:drawableTint="@color/black" android:drawablePadding="8dp" android:gravity="center_vertical" android:textColor="@color/black" android:textColorHint="@color/black" android:hint="Amount" android:inputType="number" android:padding="10dp" android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/others" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="180dp" android:orientation="vertical">
+            <CheckBox android:id="@+id/disabled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Disable phone number validation (for ported numbers)" android:textColor="@color/white" android:buttonTint="@color/colorPrimary" android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="250dp" android:orientation="vertical">
+            <EditText android:id="@+id/mobile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/editext_border" android:drawableLeft="@drawable/phone" android:drawableRight="@drawable/contac" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:drawablePadding="8dp" android:gravity="center_vertical" android:textColor="@color/black" android:textColorHint="@color/black" android:hint="Mobile" android:inputType="number" android:padding="10dp" android:textSize="16sp"/>
+            <View android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/colorPrimary"/>
+            <EditText android:id="@+id/cmobile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/editext_border" android:drawableLeft="@drawable/phone" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:drawablePadding="8dp" android:gravity="center_vertical" android:textColor="@color/black" android:textColorHint="@color/black" android:hint="Confirm Mobile" android:inputType="number" android:padding="10dp" android:textSize="16sp"/>
+            <Button android:id="@+id/add" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginLeft="50dp" android:layout_marginRight="50dp" android:background="@drawable/loginbutton_selector" android:padding="3dp" android:text="CONTINUE" android:textColor="#ffffff" android:backgroundTint="@color/grey" android:textSize="17sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
