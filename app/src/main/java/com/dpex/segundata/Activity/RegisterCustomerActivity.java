@@ -41,7 +41,7 @@ ProgressBar progress ;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registercustomer);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         final TextInputLayout emailEditText = findViewById(R.id.email);
         final TextInputLayout passwordEditText = findViewById(R.id.password);
         final TextView already_user= findViewById(R.id.already_user);
@@ -98,12 +98,15 @@ ProgressBar progress ;
               Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
 
        }else  if (password.length()< 8){
+                    passwordEditText.setError("Password must be 8 character or above");
               Toast.makeText(RegisterCustomerActivity.this, "Password must be 8 character or above", Toast.LENGTH_LONG).show();
 
-          }else  if (phone.length()< 11){
+          }else  if (phone.length()!= 11){
+                    p.setError("Phone number should be 11 digits");
                     Toast.makeText(RegisterCustomerActivity.this, "Phone number must be 11 character or above", Toast.LENGTH_LONG).show();
 
                 }else  if (!isValidEmailId(email)){
+                    emailEditText.setError("Please Enter Valid Email");
                     Toast.makeText(RegisterCustomerActivity.this, "Email is not valid", Toast.LENGTH_LONG).show();
 
                 }else if(c.isChecked()) {

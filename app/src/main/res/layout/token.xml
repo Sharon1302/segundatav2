@@ -41,14 +41,14 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/editext_border"
             android:drawableLeft="@drawable/password"
-            android:drawableTint="@color/white"
+            android:drawableTint="@color/black"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
             android:hint="TOKEN"
             android:inputType="text"
             android:padding="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="16sp" />
 
         <LinearLayout

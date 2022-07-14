@@ -1,5 +1,6 @@
 package com.dpex.segundata.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +38,7 @@ String BundleID = "" ;
 int LoadPinListOnce = 0 ;
 ProgressBar progress;
 Button add ;
+    ProgressDialog mProgressDialog;
     String Price ;
     String ServiceSubType = "" ;
     @Override
@@ -49,6 +51,7 @@ Button add ;
         final TextView purchased = findViewById(R.id.purchased);
         final TextView discount = findViewById(R.id.discount);
         final TextView charges= findViewById(R.id.charges);
+        mProgressDialog = new ProgressDialog(FinalActivity.this);
      add= findViewById(R.id.add);
         progress = findViewById(R.id.progressBar);
 mobile.setText(Constants.UpPhone);
@@ -95,6 +98,8 @@ charges.setText("N "+(Double.parseDouble(Constants.UpPrice) - Dis) );
             @Override
             public void onClick(View v) {
                 Constants.PinpAdTitle = "buy";
+                mProgressDialog.setMessage("Please Wait ");
+                mProgressDialog.show();
                 Intent intent = new Intent(FinalActivity.this, PinPad.class);
                 startActivity(intent);
 

@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.dpex.segundata.Activity.ChangePassword;
 import com.dpex.segundata.Activity.ChangePin;
 import com.dpex.segundata.Activity.ResetActivity;
+import com.dpex.segundata.Constant.Constants;
 import com.dpex.segundata.R;
 
 
@@ -55,6 +56,7 @@ public class AccountFragment extends Fragment {
         resetPin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Constants.resetType = "resetPin";
                 Intent intent = new Intent(getActivity(), ResetActivity.class);
                 startActivity(intent);
             }

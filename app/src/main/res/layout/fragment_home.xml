@@ -207,8 +207,9 @@
             android:id="@+id/linviewmessages"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="100dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:elevation="20dp"
             android:orientation="vertical">
 
@@ -228,8 +229,8 @@
 
             <ImageView
                 style="?android:attr/progressBarStyleLarge"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="right"
                 android:layout_marginTop="-20dp"

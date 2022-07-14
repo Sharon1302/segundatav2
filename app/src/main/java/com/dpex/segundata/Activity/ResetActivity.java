@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -33,16 +34,23 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ResetActivity extends AppCompatActivity {
 ProgressBar progress ;
  EditText email ;
+ TextView resetType;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         email= findViewById(R.id.email);
+        resetType = findViewById(R.id.resetText);
 
         final Button reset = findViewById(R.id.reset);
         progress= findViewById(R.id.progressBar);
 
+        if(Constants.resetType.equals("forgotPassword")){
+            resetType.setText("Reset Password");
+        }else{
+            resetType.setText("Reset Pin");
+        }
       /*
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override

@@ -6,6 +6,7 @@
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/account_upgrade.xml" value="0.20416666666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_account.xml" value="0.20416666666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_card.xml" value="0.16394927536231885" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_card_amount.xml" value="0.1105072463768116" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_dashboard.xml" value="0.20416666666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/activity_payment.xml" value="0.16394927536231885" />
@@ -29,10 +30,13 @@
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/manual_funding.xml" value="0.1875" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/menu.xml" value="0.21" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/messages.xml" value="0.1" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/messageslist.xml" value="0.21" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/passwordchange.xml" value="0.18854166666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/payment.xml" value="0.1105072463768116" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/pinchange.xml" value="0.18854166666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/pinpad.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/send_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/token.xml" value="0.1" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/transfer.xml" value="0.20416666666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/view_list_item.xml" value="0.20416666666666666" />
         <entry key="..\:/MY PROJECTS/SegunData 05-05-2022/SegunData/app/src/main/res/layout/view_list_no_selection_item.xml" value="0.20416666666666666" />

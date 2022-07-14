@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="UPDATE ACCOUNT"
+            android:backgroundTint="@color/grey"
             android:textColor="@color/black"
             android:id="@+id/updateAccount"
 
@@ -22,6 +23,7 @@
         <Button
             android:layout_width="match_parent"
             android:textColor="@color/black"
+            android:backgroundTint="@color/grey"
             android:layout_height="wrap_content"
             android:text="CHANGE PASSWORD"
             android:id="@+id/changePass"
@@ -32,12 +34,14 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="CHANGE PIN"
+            android:backgroundTint="@color/grey"
             android:id="@+id/changePin"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:backgroundTint="@color/grey"
             android:text="RESET PIN"
             android:id="@+id/resetPin"
             />

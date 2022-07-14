@@ -21,6 +21,8 @@ import com.dpex.segundata.R;
 import com.teamapt.monnify.sdk.Monnify;
 import com.teamapt.monnify.sdk.MonnifyTransactionResponse;
 import com.teamapt.monnify.sdk.data.model.TransactionDetails;
+import com.teamapt.monnify.sdk.model.PaymentMethod;
+import com.teamapt.monnify.sdk.rest.data.request.SubAccountDetails;
 import com.teamapt.monnify.sdk.service.ApplicationMode;
 
 import androidx.annotation.NonNull;
@@ -32,6 +34,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -67,9 +70,9 @@ public class PaymentActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Payment");
 
-        monnify.setApiKey("MK_TEST_NNAHV8N9XC");
-        monnify.setContractCode("8715129217");
-        monnify.setApplicationMode(ApplicationMode.TEST);
+        monnify.setApiKey("MK_PROD_6SGL2QFF9H");
+        monnify.setContractCode("184373797471");
+        monnify.setApplicationMode(ApplicationMode.LIVE);
         instant = findViewById(R.id.instant);
         manual = findViewById(R.id.manual);
         payWithCard = findViewById(R.id.payWithCard);
@@ -100,7 +103,8 @@ public class PaymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                initiatePayment();
+                Intent cardIntent = new Intent(PaymentActivity.this,cardAmount.class);
+                startActivity(cardIntent);
 
 
             }
@@ -111,11 +115,11 @@ public class PaymentActivity extends AppCompatActivity {
     private void initiatePayment() {
         Date Time = Calendar.getInstance().getTime();
         String currentTime = String.valueOf(Time);
-        String amount = "200";
+        String amount = "50";
         TransactionDetails transaction = new TransactionDetails.Builder()
                 .amount(new BigDecimal(amount))
                 .currencyCode("NGN")
-                .customerName("Customer Name")
+                .customerName(Constants.UserEmail)
                 .customerEmail("sharonayoola4@gmail.com")
                 .paymentReference(currentTime)
                 .paymentDescription(currentTime + amount)
@@ -169,6 +173,23 @@ public class PaymentActivity extends AppCompatActivity {
         }
 
     }
+    TransactionDetails transaction = new TransactionDetails.Builder()
+            //...
+            .incomeSplitConfig(new ArrayList<SubAccountDetails>() {{
+                add(new SubAccountDetails("MFY_SUB_319452883968", 10.5f, new BigDecimal("500"), true));
+                add(new SubAccountDetails("MFY_SUB_259811283666", 10.5f, new BigDecimal("1000"), false));
+            }})
+            .metaData(new HashMap<String, String>() {{
+                put("deviceType", "mobile_android");
+                put("ip", "127.168.22.98");
+                // any other info
+            }})
+            .paymentMethods(new ArrayList<PaymentMethod>() {{
+                add(PaymentMethod.CARD);
+                add(PaymentMethod.ACCOUNT_TRANSFER);
+            }})
+            .build();
+
 
     private void getTransactionStatus() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.ORDER,

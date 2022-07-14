@@ -79,7 +79,7 @@
             android:background="@drawable/loginbutton_selector"
             android:padding="4dp"
             android:text="UPGRADE MY ACCOUNT TO RESELLER"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:backgroundTint="@color/colorPrimaryDark"
             android:textSize="17sp"
             android:textStyle="bold" />

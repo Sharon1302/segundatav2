@@ -61,28 +61,49 @@ String Passwor = "" ,pPasswor = "" ;
 
         app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
+        if(Constants.resetType.equals("resetPin")){
+            cpin.setVisibility(View.GONE);
+        }
 
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-if("".equalsIgnoreCase(password.getText().toString())){
-    Toast.makeText(ChangePin.this, "Please enter pin", Toast.LENGTH_LONG).show();
-} else if("".equalsIgnoreCase(cpassword.getText().toString())){
-    Toast.makeText(ChangePin.this, "Please enter confirm pin", Toast.LENGTH_LONG).show();
-}else if(!(password.getText().toString().equalsIgnoreCase(cpassword.getText().toString()))){
-    Toast.makeText(ChangePin.this, "Password do not match", Toast.LENGTH_LONG).show();
-}else {
-    Passwor = password.getText().toString() ;
-    pPasswor = cpin.getText().toString() ;
+                if (Constants.resetType.equals("resetPin")) {
+                    if ("".equalsIgnoreCase(cpassword.getText().toString())) {
+                        Toast.makeText(ChangePin.this, "Please enter confirm pin", Toast.LENGTH_LONG).show();
+                    } else if (!(password.getText().toString().equalsIgnoreCase(cpassword.getText().toString()))) {
+                        Toast.makeText(ChangePin.this, "Password do not match", Toast.LENGTH_LONG).show();
+                    } else {
+                        Passwor = password.getText().toString();
+                        pPasswor = cpin.getText().toString();
 
-    int color = Color.parseColor("#D3D3D3");
-change.getBackground().mutate().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC));
-change.setEnabled(false);
+                        int color = Color.parseColor("#D3D3D3");
+                        change.getBackground().mutate().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC));
+                        change.setEnabled(false);
 
 
-    CHANGE() ;
-}
+                        CHANGE();
+                    }
+                }else{
+                if ("".equalsIgnoreCase(password.getText().toString())) {
+                    Toast.makeText(ChangePin.this, "Please enter pin", Toast.LENGTH_LONG).show();
+                } else if ("".equalsIgnoreCase(cpassword.getText().toString())) {
+                    Toast.makeText(ChangePin.this, "Please enter confirm pin", Toast.LENGTH_LONG).show();
+                } else if (!(password.getText().toString().equalsIgnoreCase(cpassword.getText().toString()))) {
+                    Toast.makeText(ChangePin.this, "Password do not match", Toast.LENGTH_LONG).show();
+                } else {
+                    Passwor = password.getText().toString();
+                    pPasswor = cpin.getText().toString();
+
+                    int color = Color.parseColor("#D3D3D3");
+                    change.getBackground().mutate().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC));
+                    change.setEnabled(false);
+
+
+                    CHANGE();
+                }
             }
+        }
         });
 
 

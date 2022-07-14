@@ -58,7 +58,7 @@ amount.setVisibility(View.GONE);
         }else{
             setTitle("Manual Payment");
             i.setText("Manual Funding");
-            u.setText("Please note that payment below #2000 will attract #50 Charges. Maximum payment per transaction is #9999.");
+            u.setText("Please note that payment below #5000 will attract #50 Charges. Maximum payment per transaction is #9999.");
             amount.setVisibility(View.VISIBLE);
             fund.setVisibility(View.VISIBLE);
             aname.setVisibility(View.GONE);

@@ -150,6 +150,7 @@ public class MainActivity extends Activity {
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Constants.resetType = "forgotPassword";
 
                 Intent intent = new Intent(MainActivity.this,ResetActivity.class);
                 startActivity(intent);

@@ -243,7 +243,8 @@ EditText mobile,cmobile;
                     if (Double.parseDouble(Price) < 50) {
                         Toast.makeText(BuyActivity.this, "Transaction amount too low", Toast.LENGTH_SHORT).show();
 
-                    } else if (Double.parseDouble(Price) <= Double.parseDouble(Constants.Balance)) {
+                    }
+                    else if (Double.parseDouble(Price) <= Double.parseDouble(Constants.Balance)) {
 
                         Constants.UpBundleID = BundleID;
                         Constants.UpPhone = Mobile;

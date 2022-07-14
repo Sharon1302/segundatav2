@@ -175,7 +175,6 @@ String Passwor = "" ;
 
                                 Intent intent = new Intent(PinPad.this,Dashboard.class);
                                 startActivity(intent);
-                                mProgressDialog.dismiss();
                                 finish();
 
 
@@ -285,13 +284,7 @@ String Passwor = "" ;
                                 String balance = jsonObject.getString("balance");
                                 Constants.BalanceText = "N " + balance;
                                 Constants.Balance = balance;
-
-
-
                                 Toast.makeText(PinPad.this, message, Toast.LENGTH_LONG).show();
-
-
-
                                 Intent intent = new Intent(PinPad.this,MainActivity.class);
                                 startActivity(intent);
                                 finish();

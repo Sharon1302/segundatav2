@@ -34,7 +34,7 @@
             android:drawableTint="@color/black"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:drawableLeft="@drawable/coin"
             android:textColorHint="@color/black"
             android:hint="Enter Amount"

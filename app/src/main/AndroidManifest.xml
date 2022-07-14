@@ -20,15 +20,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Activity.cardAmount"
+            android:exported="false" />
+        <activity
             android:name=".Activity.ui.account.updateAccountActivity"
             android:exported="false"
             android:label="@string/title_activity_update_account"
-            android:theme="@style/AppTheme.NoActionBar" />
-<!--        <activity-->
-<!--            android:name=".Activity.ui.account.updateAccountActivity"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_update_account"-->
-<!--            android:theme="@style/AppTheme.NoActionBar" />-->
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity -->
+        <!-- android:name=".Activity.ui.account.updateAccountActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_update_account" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
         <activity
             android:name=".Activity.ui.account.accountActivity"
             android:exported="false" />

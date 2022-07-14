@@ -182,10 +182,16 @@ validate.setOnClickListener(new View.OnClickListener() {
 
                                 Toast.makeText(ValidateToken.this, message, Toast.LENGTH_LONG).show();
 
+                                if(Constants.resetType.equals("forgotPassword")){
+                                    Intent intent = new Intent(ValidateToken.this,ChangePassword.class);
+                                    startActivity(intent);
+                                    finish() ;
+                                }else{
+                                    Intent intent = new Intent(ValidateToken.this,ChangePin.class);
+                                    startActivity(intent);
+                                    finish() ;
+                                }
 
-                                Intent intent = new Intent(ValidateToken.this,ChangePassword.class);
-                                startActivity(intent);
-                                finish() ;
 
 
                             }else if ("Invalid".equals(success)) {
