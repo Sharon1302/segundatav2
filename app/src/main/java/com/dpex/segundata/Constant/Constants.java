@@ -35,7 +35,6 @@ public static String SeLECTORDERSTATUS= MAINURL+"getorderstatus/" ;
     public static String UPDATEORDERSTATUS= MAINURL+"updateorderstatus" ;
     public static String UPDATEMYACCOUNT= MAINURL+"updatemyaccount" ;
     public static String UPDATEPIN2= MAINURL+"updatepin2" ;
-    public static String resetPin= MAINURL+"pinreset";
     public static String UPDATEPIN= MAINURL+"updatepin" ;
     public static String ADMINBUNDLE= MAINURL+"" ;
     public static String WEBVIEW= "" ;

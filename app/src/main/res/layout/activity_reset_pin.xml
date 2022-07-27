@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Activity.resetPin">
+    <TextView
+        android:id="@+id/i"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="CHANGE PIN"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="CHANGE TRANSACTION PIN"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white" />
+        <EditText
+            android:id="@+id/reset_pin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editext_border"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="10dp"
+            android:drawableTint="@color/black"
+            android:gravity="center_vertical"
+            android:hint="Pin"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white" />
+
+        <EditText
+            android:id="@+id/confirm_reset_pin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editext_border"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/black"
+            android:gravity="center_vertical"
+            android:hint="Confirm Pin"
+            android:layout_marginBottom="10dp"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:padding="3dp"
+            android:text="CHANGE"
+            android:background="@drawable/loginbutton_selector"
+            android:backgroundTint="@color/grey"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>

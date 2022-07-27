@@ -34,7 +34,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ChangePassword extends AppCompatActivity {
     public static final String Password = "passwordKey";
 ProgressBar progress ;
-String Passwor = "" ;
+String new_Password = "" ;
 String oldPassword1,ppassword;
 public static final String Email = "emailKey";
     SharedPreferences app_preferences ;
@@ -46,16 +46,21 @@ public static final String Email = "emailKey";
 
 
         final Button change = findViewById(R.id.change);
+        final EditText oldPassword = findViewById(R.id.oldPassword);
 
-        final EditText password = findViewById(R.id.phone);
+        final EditText newPassword = findViewById(R.id.newPassword);
 
-        final EditText cpassword = findViewById(R.id.cpassword);
+        final EditText confirmpassword = findViewById(R.id.confirmPassword);
 
         progress= findViewById(R.id.progressBar);
+
 
         app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
           ppassword = Constants.UserPassword;
+        if(Constants.resetType.equals("forgotPassword")){
+            oldPassword.setVisibility(View.GONE);
+        }
 
 
 
@@ -65,32 +70,56 @@ public static final String Email = "emailKey";
             public void onClick(View v) {
                 System.out.println(oldPassword1);
                 System.out.println(ppassword);
+                if(Constants.resetType.equals("forgotPassword")){
+                     if("".equalsIgnoreCase(confirmpassword.getText().toString())){
+                        confirmpassword.setError("please enter confirm password");
+                        Toast.makeText(ChangePassword.this, "Please enter confirm password", Toast.LENGTH_LONG).show();
+                    }else if(!(confirmpassword.getText().toString().equals(confirmpassword.getText().toString()))){
+                        confirmpassword.setError("password do not match");
+                        Toast.makeText(ChangePassword.this, "Password do not match", Toast.LENGTH_LONG).show();
+                    }else  if (newPassword.length()< 8){
+                        newPassword.setError("Password must be 8 character or above");
+                        Toast.makeText(ChangePassword.this, "Password must be 8 character or above", Toast.LENGTH_LONG).show();
 
-if("".equalsIgnoreCase(password.getText().toString())){
-    password.setError("please enter password");
+                    }else{
+                         new_Password = newPassword.getText().toString() ;
+                         progress.setVisibility(View.VISIBLE);
+                         CHANGE();
+                     }
+                }
+                else{
+
+if("".equalsIgnoreCase(newPassword.getText().toString())){
+    newPassword.setError("please enter password");
     Toast.makeText(ChangePassword.this, "Please enter password", Toast.LENGTH_LONG).show();
-} else if("".equalsIgnoreCase(cpassword.getText().toString())){
-    password.setError("please enter confirm password");
+}else if("".equalsIgnoreCase(oldPassword.getText().toString())){
+    oldPassword.setError("please Enter Old Pin");
+} else if (!(oldPassword.getText().toString().equals(Constants.UserPassword))){
+    oldPassword.setError("please Enter Correct Old Pin");
+}
+else if("".equalsIgnoreCase(confirmpassword.getText().toString())){
+    confirmpassword.setError("please enter confirm password");
     Toast.makeText(ChangePassword.this, "Please enter confirm password", Toast.LENGTH_LONG).show();
-}else if(!(password.getText().toString().equalsIgnoreCase(cpassword.getText().toString()))){
-    password.setError("password do not match");
+}else if(!(confirmpassword.getText().toString().equalsIgnoreCase(confirmpassword.getText().toString()))){
+    confirmpassword.setError("password do not match");
     Toast.makeText(ChangePassword.this, "Password do not match", Toast.LENGTH_LONG).show();
-}else  if (password.length()< 8){
-    password.setError("Password must be 8 character or above");
+}else  if (newPassword.length()< 8){
+    newPassword.setError("Password must be 8 character or above");
     Toast.makeText(ChangePassword.this, "Password must be 8 character or above", Toast.LENGTH_LONG).show();
 
 }
 else {
-    Passwor = password.getText().toString() ;
+    new_Password = newPassword.getText().toString() ;
     progress.setVisibility(View.VISIBLE);
     CHANGE();
 }
             }
-        });
+        }
 
 
 
 
+    });
     }
 
 
@@ -118,6 +147,7 @@ else {
                                 SharedPreferences.Editor editor = app_preferences.edit();
                                 editor.putString(Email,"");
                                 editor.commit();
+                                Constants.resetType="";
                                 Intent intent = new Intent(ChangePassword.this,MainActivity.class);
                                 startActivity(intent);
                                 finish() ;
@@ -151,7 +181,7 @@ else {
                 Map<String,String> params = new HashMap<String, String>();
 
                 params.put("email",""+ Constants.UserEmail);
-                params.put("password",""+Passwor);
+                params.put("password",""+new_Password);
 
                 return params;
             }

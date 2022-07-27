@@ -94,10 +94,30 @@ ProgressBar progress ;
 
 
 
-                if (("".equalsIgnoreCase(email)) || ("".equalsIgnoreCase(username)) || ("".equalsIgnoreCase(password)) || ("".equalsIgnoreCase(firstname)) || ("".equalsIgnoreCase(lastname)) || ("".equalsIgnoreCase(phone)) || ("".equalsIgnoreCase(confirmpassword))){
+                if (("".equalsIgnoreCase(email))){
               Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
 
-       }else  if (password.length()< 8){
+       }
+                else if ( ("".equalsIgnoreCase(username))){
+                    u.setError("please input username");
+                    Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
+
+                }else if ( ("".equalsIgnoreCase(password))){
+                    passwordEditText.setError("please input password");
+                    Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
+
+                }
+               else if ( ("".equalsIgnoreCase(firstname))){
+                    f.setError("please enter First name");
+                    Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
+
+                }else if ( ("".equalsIgnoreCase(lastname))){
+                    l.setError("please enter Last name");
+                    Toast.makeText(RegisterCustomerActivity.this, "All field are compulsory", Toast.LENGTH_LONG).show();
+
+                }
+
+                else  if (password.length()< 8){
                     passwordEditText.setError("Password must be 8 character or above");
               Toast.makeText(RegisterCustomerActivity.this, "Password must be 8 character or above", Toast.LENGTH_LONG).show();
 

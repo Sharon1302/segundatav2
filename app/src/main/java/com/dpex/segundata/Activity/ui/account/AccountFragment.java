@@ -21,6 +21,7 @@ public class AccountFragment extends Fragment {
     Button update, changePassword,changePin,resetPin;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class AccountFragment extends Fragment {
         changePassword = root.findViewById(R.id.changePass);
         changePin =root.findViewById(R.id.changePin);
         resetPin = root.findViewById(R.id.resetPin);
+        Constants.resetType = "";
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +58,6 @@ public class AccountFragment extends Fragment {
         resetPin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Constants.resetType = "resetPin";
                 Intent intent = new Intent(getActivity(), ResetActivity.class);
                 startActivity(intent);
             }

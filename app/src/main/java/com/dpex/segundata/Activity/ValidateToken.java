@@ -187,7 +187,7 @@ validate.setOnClickListener(new View.OnClickListener() {
                                     startActivity(intent);
                                     finish() ;
                                 }else{
-                                    Intent intent = new Intent(ValidateToken.this,ChangePin.class);
+                                    Intent intent = new Intent(ValidateToken.this,resetPin.class);
                                     startActivity(intent);
                                     finish() ;
                                 }

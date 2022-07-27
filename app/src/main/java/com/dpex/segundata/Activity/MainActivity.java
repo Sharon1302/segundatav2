@@ -50,11 +50,13 @@ public class MainActivity extends Activity {
     public static final String Last = "lastKey";
     public static final String Phone = "phoneKey";
     public static final String LastID = "lastidKey";
+
     SharedPreferences app_preferences ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Constants.resetType="";
         SharedPreferences preferences =
                 getSharedPreferences("my_preferences", MODE_PRIVATE);
 // Caused by: java.lang.IllegalArgumentException: The style on this component requires your app theme to be Theme.MaterialComponents (or a descendant).

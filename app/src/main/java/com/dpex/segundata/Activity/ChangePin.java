@@ -59,7 +59,7 @@ String Passwor = "" ,pPasswor = "" ;
         final EditText cpassword = findViewById(R.id.cpassword);
 
 
-        app_preferences =
+       app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
         if(Constants.resetType.equals("resetPin")){
             cpin.setVisibility(View.GONE);
@@ -82,12 +82,14 @@ String Passwor = "" ,pPasswor = "" ;
                         change.setEnabled(false);
 
 
-                        CHANGE();
+                        CHANGE2();
                     }
-                }else{
+                }
+                else{
                 if ("".equalsIgnoreCase(password.getText().toString())) {
                     Toast.makeText(ChangePin.this, "Please enter pin", Toast.LENGTH_LONG).show();
-                } else if ("".equalsIgnoreCase(cpassword.getText().toString())) {
+                }
+                else if ("".equalsIgnoreCase(cpassword.getText().toString())) {
                     Toast.makeText(ChangePin.this, "Please enter confirm pin", Toast.LENGTH_LONG).show();
                 } else if (!(password.getText().toString().equalsIgnoreCase(cpassword.getText().toString()))) {
                     Toast.makeText(ChangePin.this, "Password do not match", Toast.LENGTH_LONG).show();
@@ -111,7 +113,69 @@ String Passwor = "" ,pPasswor = "" ;
 
     }
 
+    private void CHANGE2() {
+        {
 
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.UPDATEPIN2,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            Log.e("our response string",""+response.toString());
+                            JSONObject jsonObject = null;
+                            try {
+                                jsonObject = new JSONObject(response.toString());
+                                //  progressDialogMain.dismiss();
+                                String success = jsonObject.getString("success");
+                                String message = jsonObject.getString("message");
+                                if ("True".equals(success))
+                                {
+
+                                    SharedPreferences.Editor editor = app_preferences.edit();
+                                    editor.putString(Pin,Passwor) ;
+                                    editor.commit();
+                                    Toast.makeText(ChangePin.this, message, Toast.LENGTH_LONG).show();
+                                    onBackPressed();
+
+                                }else
+                                {
+                                    Toast.makeText(ChangePin.this, message, Toast.LENGTH_LONG).show();
+
+                                }
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+
+                            }
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                            Log.d("response string",""+error.toString());
+                        }
+                    }){
+
+                @Override
+                protected Map<String,String> getParams(){
+                    Map<String,String> params = new HashMap<String, String>();
+
+                    params.put("email",""+Constants.UserEmail);
+                    params.put("pin",""+Passwor);
+                    return params;
+                }
+
+            };
+            stringRequest.setRetryPolicy(new DefaultRetryPolicy(10000,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            RequestQueue requestQueue = Volley.newRequestQueue(ChangePin.this);
+            requestQueue.add(stringRequest);}
+    }
 
 
     public void  CHANGE()

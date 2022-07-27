@@ -98,6 +98,7 @@ ProgressBar progress ;
     {
 
 Constants.RESETEMAIL = email.getText().toString() ;
+Constants.UserEmail = email.getText().toString();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.GETTOKEN,
                 new Response.Listener<String>() {
                     @Override

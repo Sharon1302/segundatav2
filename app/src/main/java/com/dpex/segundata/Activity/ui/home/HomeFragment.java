@@ -115,7 +115,7 @@ String phoneNo="",message="";
                // textView.setText(s);
             }
         });
-
+          Constants.resetType="";
 
         firstedittext=root.findViewById(R.id.firstedittext);
         include =root.findViewById(R.id.include);
